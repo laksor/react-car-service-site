@@ -3,11 +3,13 @@ import React from "react";
 const Service = ({ service }) => {
   const { name, img, price, description } = service;
   return (
-    <div>
+    <div className="">
       <img src={img} alt='kaj'></img>
       <h2>{name}</h2>
-      <p>{description}</p>
-      <p>{price}</p>
+      <p>Price: {price}</p>
+      <p><small>{description}</small></p>
+      <button>Book this service</button>
+      
     </div>
   );
 };
