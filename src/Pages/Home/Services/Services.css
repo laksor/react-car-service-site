@@ -1,0 +1,12 @@
+
+.services-title{
+    color: blue;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.services-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
