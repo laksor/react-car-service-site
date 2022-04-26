@@ -1,6 +1,6 @@
 import React from 'react';
 import './Experts.css';
-
+import Expert from '../Expert/Expert';
 import experts1 from '../../../images/experts/expert-1.jpg';
 import experts2 from '../../../images/experts/expert-2.jpg';
 import experts3 from '../../../images/experts/expert-3.jpg';
@@ -19,8 +19,16 @@ const experts = [
 
 const Experts = () => {
     return (
-        <div>
-            <h1 className='experts-title'>Our Experts</h1>
+        <div className='container'>
+            <h1 className='text-primary text-center mt-4'>Our Experts</h1>
+            <div className='row'>
+            {
+                experts.map(expert => <Expert
+                    key={expert.id}
+                    expert={expert}
+                    ></Expert>)
+            }
+            </div>
         </div>
     );
 };
