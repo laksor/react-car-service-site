@@ -4,15 +4,15 @@ const Expert = ({ expert }) => {
   const { name, img } = expert;
   return (
     <div className="g-5 gx-5 col-sm-12 col-md-6 col-lg-4 text-center">
-      <div class="card" style={{ width: "18rem" }}>
-        <img src={img} class="card-img-top" alt="..." />
-        <div class="card-body">
-          <h5 class="card-title">{name}</h5>
-          <p class="card-text">
+      <div className="card  mx-auto" style={{ width: "18rem" }}>
+        <img src={img} className="card-img-top w-100" alt="..." />
+        <div className="card-body">
+          <h5 className="card-title">{name}</h5>
+          <p className="card-text">
             Some quick example text to build on the card title and make up the
             bulk of the card's content.
           </p>
-          <a href="#" class="btn btn-primary">
+          <a href="#" className="btn btn-primary">
             Go somewhere
           </a>
         </div>
