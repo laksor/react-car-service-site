@@ -32,7 +32,7 @@ const Login = () => {
 
   return (
     <div>
-      <h2 className="mt-5 text-primary fw-bold text-center">LogIn</h2>
+      <h2 className="mt-5 text-primary fw-bold text-center">Login</h2>
       <Form
         className="container py-5 w-50"
         noValidate
