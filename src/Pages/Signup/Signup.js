@@ -1,11 +1,11 @@
-import React, { useRef, useState } from 'react';
-import { Button, Form } from 'react-bootstrap';
-import { useNavigate } from 'react-router-dom';
+import React, { useRef, useState } from "react";
+import { Button, Form } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 
 const Signup = () => {
-    const emailRef = useRef('');
-  const passRef = useRef('');
-  const nameRef = useRef('');
+  const emailRef = useRef("");
+  const passRef = useRef("");
+  const nameRef = useRef("");
   const navigate = useNavigate();
 
   const [validated, setValidated] = useState(false);
@@ -23,13 +23,12 @@ const Signup = () => {
       event.preventDefault();
       event.stopPropagation();
     }
-
     setValidated(true);
   };
 
-  const navigateLogin = event =>{
+  const navigateLogin = (event) => {
     navigate(`/login`);
-  }
+  };
 
   return (
     <div>
@@ -40,14 +39,24 @@ const Signup = () => {
         validated={validated}
         onSubmit={handleSubmit}
       >
-      <Form.Group className="mb-3" >
+        <Form.Group className="mb-3">
           <Form.Label>Your Name</Form.Label>
-          <Form.Control ref={nameRef} type="text" placeholder="Your name" required />
+          <Form.Control
+            ref={nameRef}
+            type="text"
+            placeholder="Your name"
+            required
+          />
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>
-          <Form.Control ref={emailRef} type="email" placeholder="Enter email" required />
+          <Form.Control
+            ref={emailRef}
+            type="email"
+            placeholder="Enter email"
+            required
+          />
           <Form.Text className="text-muted">
             We'll never share your email with anyone else.
           </Form.Text>
@@ -55,7 +64,12 @@ const Signup = () => {
 
         <Form.Group className="mb-3" controlId="formBasicPassword">
           <Form.Label>Password</Form.Label>
-          <Form.Control ref={passRef} type="password" placeholder="Password" required />
+          <Form.Control
+            ref={passRef}
+            type="password"
+            placeholder="Password"
+            required
+          />
         </Form.Group>
         <Form.Group className="mb-3" controlId="formBasicCheckbox">
           <Form.Check type="checkbox" label="Check me out" />
@@ -64,9 +78,18 @@ const Signup = () => {
           Submit
         </Button>
       </Form>
-      <p className="text-center">Already have an account ? <span style={{cursor:'pointer'}} className="text-decoration-underline text-danger" onClick={navigateLogin}>Please Login</span></p>
+      <p className="text-center">
+        Already have an account ?{" "}
+        <span
+          style={{ cursor: "pointer" }}
+          className="text-decoration-underline text-danger"
+          onClick={navigateLogin}
+        >
+          Please Login
+        </span>
+      </p>
     </div>
-    );
+  );
 };
 
 export default Signup;
