@@ -11,8 +11,13 @@ const Login = () => {
   const navigate = useNavigate();
 
   const [
-    signInWithEmailAndPassword
+    signInWithEmailAndPassword,
+    user
   ] = useSignInWithEmailAndPassword(auth);
+
+  if(user){
+    navigate('/home');
+  }
 
   const [validated, setValidated] = useState(false);
 
