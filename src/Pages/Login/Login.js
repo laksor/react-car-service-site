@@ -2,11 +2,17 @@ import { Button } from "react-bootstrap";
 import React, { useRef, useState } from "react";
 import { Form } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
+import auth from "../../firebase.init";
+import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 
 const Login = () => {
   const emailRef = useRef('');
   const passRef = useRef('');
   const navigate = useNavigate();
+
+  const [
+    signInWithEmailAndPassword
+  ] = useSignInWithEmailAndPassword(auth);
 
   const [validated, setValidated] = useState(false);
 
@@ -15,7 +21,7 @@ const Login = () => {
     const email = emailRef.current.value;
     const pass = passRef.current.value;
 
-    console.log(email, pass);
+    signInWithEmailAndPassword(email, pass);
 
     const form = event.currentTarget;
     if (form.checkValidity() === false) {

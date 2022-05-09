@@ -1,22 +1,28 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import { Button, Form } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
+import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import auth from "../../firebase.init";
+
 
 const Signup = () => {
-  const emailRef = useRef("");
-  const passRef = useRef("");
-  const nameRef = useRef("");
+  const [
+    createUserWithEmailAndPassword,
+    user,
+  ] = useCreateUserWithEmailAndPassword(auth);
+
+  
   const navigate = useNavigate();
 
   const [validated, setValidated] = useState(false);
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    const email = emailRef.current.value;
-    const pass = passRef.current.value;
-    const name = nameRef.current.value;
+    const email = event.target.email.value;
+    const password = event.target.password.value;
+    const name = event.target.name.value;
 
-    console.log(name, email, pass);
+    createUserWithEmailAndPassword(email, password);
 
     const form = event.currentTarget;
     if (form.checkValidity() === false) {
@@ -30,6 +36,10 @@ const Signup = () => {
     navigate(`/login`);
   };
 
+  if(user){
+    navigate('/home');
+  }
+
   return (
     <div>
       <h2 className="mt-5 text-primary fw-bold text-center">Signup</h2>
@@ -42,8 +52,8 @@ const Signup = () => {
         <Form.Group className="mb-3">
           <Form.Label>Your Name</Form.Label>
           <Form.Control
-            ref={nameRef}
             type="text"
+            name="name"
             placeholder="Your name"
             required
           />
@@ -52,8 +62,8 @@ const Signup = () => {
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>
           <Form.Control
-            ref={emailRef}
             type="email"
+            name="email"
             placeholder="Enter email"
             required
           />
@@ -65,8 +75,8 @@ const Signup = () => {
         <Form.Group className="mb-3" controlId="formBasicPassword">
           <Form.Label>Password</Form.Label>
           <Form.Control
-            ref={passRef}
             type="password"
+            name="password"
             placeholder="Password"
             required
           />
