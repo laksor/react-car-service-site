@@ -4,6 +4,7 @@ import { Form } from "react-bootstrap";
 import { useLocation, useNavigate } from "react-router-dom";
 import auth from "../../firebase.init";
 import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
+import SocialLogin from "./SocialLogin/SocialLogin";
 
 const Login = () => {
   const emailRef = useRef('');
@@ -73,6 +74,7 @@ const Login = () => {
         </Button>
       </Form>
       <p className="text-center">New to Car service ? <span style={{cursor:'pointer'}} className="text-decoration-underline text-danger" onClick={navigateSignup}>Please Signup</span></p>
+      <SocialLogin></SocialLogin>
     </div>
   );
 };
