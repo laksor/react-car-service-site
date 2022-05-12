@@ -1,17 +1,14 @@
 import React, { useState } from "react";
 import { Button, Form } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
-import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
 import auth from "../../firebase.init";
-
+import SocialLogin from "../Login/SocialLogin/SocialLogin";
 
 const Signup = () => {
-  const [
-    createUserWithEmailAndPassword,
-    user,
-  ] = useCreateUserWithEmailAndPassword(auth);
+  const [createUserWithEmailAndPassword, user] =
+    useCreateUserWithEmailAndPassword(auth);
 
-  
   const navigate = useNavigate();
 
   const [validated, setValidated] = useState(false);
@@ -36,15 +33,15 @@ const Signup = () => {
     navigate(`/login`);
   };
 
-  if(user){
-    navigate('/home');
+  if (user) {
+    navigate("/home");
   }
 
   return (
-    <div>
+    <div className="container py-5 w-50">
       <h2 className="mt-5 text-primary fw-bold text-center">Signup</h2>
       <Form
-        className="container py-5 w-50"
+        className=""
         noValidate
         validated={validated}
         onSubmit={handleSubmit}
@@ -98,6 +95,7 @@ const Signup = () => {
           Please Login
         </span>
       </p>
+      <SocialLogin></SocialLogin>
     </div>
   );
 };
