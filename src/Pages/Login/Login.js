@@ -46,10 +46,10 @@ const Login = () => {
   }
 
   return (
-    <div>
+    <div className="container w-50">
       <h2 className="mt-5 text-primary fw-bold text-center">Login</h2>
       <Form
-        className="container py-5 w-50"
+        className="py-3"
         noValidate
         validated={validated}
         onSubmit={handleSubmit}
