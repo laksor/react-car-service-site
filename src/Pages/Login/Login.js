@@ -3,7 +3,7 @@ import React, { useRef, useState } from "react";
 import { Form } from "react-bootstrap";
 import { useLocation, useNavigate } from "react-router-dom";
 import auth from "../../firebase.init";
-import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 import SocialLogin from "./SocialLogin/SocialLogin";
 
 const Login = () => {
@@ -14,8 +14,17 @@ const Login = () => {
 
   let from = location.state?.from?.pathname || "/";
 
-  const [signInWithEmailAndPassword, user] =
+  const [signInWithEmailAndPassword, user, error] =
     useSignInWithEmailAndPassword(auth);
+
+    const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
+
+    let errorElement;
+
+    if (error) {
+     
+      errorElement = <p className="text-danger mt-2">Error: {error.message}</p>
+    }
 
   if (user) {
     navigate(from, { replace: true });
@@ -43,6 +52,12 @@ const Login = () => {
     navigate(`/signup`);
   };
 
+  const resetPassword = async () => {
+    const email = emailRef.current.value;
+    await sendPasswordResetEmail(email);
+    alert('Sent email');
+  }
+
   return (
     <div className="container py-3 w-50">
       <h2 className="mt-5 text-primary fw-bold text-center">Login</h2>
@@ -69,13 +84,18 @@ const Login = () => {
             required
           />
         </Form.Group>
+        <p onClick={resetPassword} style={{ cursor: "pointer" }} className="text-decoration-underline text-danger">
+        Forgot Password ?{" "}
+      </p>
         <Form.Group className="mb-3" controlId="formBasicCheckbox">
           <Form.Check type="checkbox" label="Check me out" />
         </Form.Group>
         <Button className="btn btn-primary" type="submit">
-          Submit
+          Login
         </Button>
       </Form>
+      {errorElement}
+      
       <p className="text-center">
         New to Car service ?{" "}
         <span

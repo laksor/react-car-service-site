@@ -82,9 +82,10 @@ const Signup = () => {
           <Form.Check type="checkbox" label="Check me out" />
         </Form.Group>
         <Button className="btn btn-primary" type="submit">
-          Submit
+          Signup
         </Button>
       </Form>
+      
       <p className="text-center">
         Already have an account ?{" "}
         <span
