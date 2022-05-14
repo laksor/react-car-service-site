@@ -30,7 +30,7 @@ const Signup = () => {
   };
 
   const navigateLogin = (event) => {
-    navigate(`/login`);
+    navigate("/login");
   };
 
   if (user) {
@@ -78,9 +78,9 @@ const Signup = () => {
             required
           />
         </Form.Group>
-        <Form.Group className="mb-3" controlId="formBasicCheckbox">
-          <Form.Check type="checkbox" label="Check me out" />
-        </Form.Group>
+        <Form.Group className="mb-3">
+        <Form.Check type="checkbox" label="Accept terms and condition" required/>
+      </Form.Group>
         <Button className="btn btn-primary" type="submit">
           Signup
         </Button>

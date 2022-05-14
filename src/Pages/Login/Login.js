@@ -87,9 +87,7 @@ const Login = () => {
         <p onClick={resetPassword} style={{ cursor: "pointer" }} className="text-decoration-underline text-danger">
         Forgot Password ?{" "}
       </p>
-        <Form.Group className="mb-3" controlId="formBasicCheckbox">
-          <Form.Check type="checkbox" label="Check me out" />
-        </Form.Group>
+       
         <Button className="btn btn-primary" type="submit">
           Login
         </Button>
