@@ -10,6 +10,7 @@ import SocialLogin from "../Login/SocialLogin/SocialLogin";
 import { async } from "@firebase/util";
 import { updateProfile } from "firebase/auth";
 import Loading from "../Shared/Loading/Loading";
+import PageTitle from "../Shared/PageTitle/PageTitle";
 
 const Signup = () => {
   const [agree, setAgree] = useState(false);
@@ -55,6 +56,7 @@ const Signup = () => {
 
   return (
     <div className="container py-5 w-50">
+    <PageTitle title="Signup"></PageTitle>
       <h2 className="mt-5 text-primary fw-bold text-center">Sign up</h2>
       <Form
         className=""

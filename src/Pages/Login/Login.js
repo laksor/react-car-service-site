@@ -8,8 +8,10 @@ import SocialLogin from "./SocialLogin/SocialLogin";
 import Loading from "../Shared/Loading/Loading";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import PageTitle from "../Shared/PageTitle/PageTitle";
 
 const Login = () => {
+  
   const emailRef = useRef("");
   const passRef = useRef("");
   const navigate = useNavigate();
@@ -73,6 +75,7 @@ const Login = () => {
 
   return (
     <div className="container py-3 w-50">
+    <PageTitle title="Login"></PageTitle>
       <h2 className="mt-5 text-primary fw-bold text-center">Log In</h2>
       <Form noValidate validated={validated} onSubmit={handleSubmit}>
         <Form.Group className="mb-3" controlId="formBasicEmail">
