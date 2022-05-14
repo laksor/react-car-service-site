@@ -1,25 +1,36 @@
 import React, { useState } from "react";
 import { Button, Form } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
-import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
+import {
+  useCreateUserWithEmailAndPassword,
+  useUpdateProfile,
+} from "react-firebase-hooks/auth";
 import auth from "../../firebase.init";
 import SocialLogin from "../Login/SocialLogin/SocialLogin";
+import { async } from "@firebase/util";
+import { updateProfile } from "firebase/auth";
+import Loading from "../Shared/Loading/Loading";
 
 const Signup = () => {
-  const [createUserWithEmailAndPassword, user] =
-    useCreateUserWithEmailAndPassword(auth);
+  const [agree, setAgree] = useState(false);
+  const [createUserWithEmailAndPassword, user, loading] =
+    useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
+  const [updateProfile, updating] = useUpdateProfile(auth);
 
   const navigate = useNavigate();
 
   const [validated, setValidated] = useState(false);
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
     const email = event.target.email.value;
     const password = event.target.password.value;
     const name = event.target.name.value;
 
-    createUserWithEmailAndPassword(email, password);
+    await createUserWithEmailAndPassword(email, password);
+    await updateProfile({ displayName: name });
+    console.log("Updated profile");
+    navigate("/home");
 
     const form = event.currentTarget;
     if (form.checkValidity() === false) {
@@ -33,13 +44,18 @@ const Signup = () => {
     navigate("/login");
   };
 
+  
+  if(loading || updating){
+    return <Loading></Loading>
+  }
+
   if (user) {
-    navigate("/home");
+    console.log(user);
   }
 
   return (
     <div className="container py-5 w-50">
-      <h2 className="mt-5 text-primary fw-bold text-center">Signup</h2>
+      <h2 className="mt-5 text-primary fw-bold text-center">Sign up</h2>
       <Form
         className=""
         noValidate
@@ -79,13 +95,17 @@ const Signup = () => {
           />
         </Form.Group>
         <Form.Group className="mb-3">
-        <Form.Check type="checkbox" label="Accept terms and condition" required/>
-      </Form.Group>
-        <Button className="btn btn-primary" type="submit">
+          <Form.Check
+            onClick={() => setAgree(!agree)}
+            type="checkbox"
+            label="Accept terms and condition"
+          />
+        </Form.Group>
+        <Button className="btn btn-primary" type="submit" disabled={!agree}>
           Signup
         </Button>
       </Form>
-      
+
       <p className="text-center">
         Already have an account ?{" "}
         <span

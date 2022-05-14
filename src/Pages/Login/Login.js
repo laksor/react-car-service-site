@@ -5,6 +5,9 @@ import { useLocation, useNavigate } from "react-router-dom";
 import auth from "../../firebase.init";
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 import SocialLogin from "./SocialLogin/SocialLogin";
+import Loading from "../Shared/Loading/Loading";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
   const emailRef = useRef("");
@@ -14,8 +17,9 @@ const Login = () => {
 
   let from = location.state?.from?.pathname || "/";
 
-  const [signInWithEmailAndPassword, user, error] =
+  const [signInWithEmailAndPassword, user, loading, error] =
     useSignInWithEmailAndPassword(auth);
+    
 
     const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
 
@@ -48,19 +52,28 @@ const Login = () => {
     setValidated(true);
   };
 
+  if(loading || sending){
+    return <Loading></Loading>
+  }
+
   const navigateSignup = (event) => {
     navigate(`/signup`);
   };
 
   const resetPassword = async () => {
     const email = emailRef.current.value;
-    await sendPasswordResetEmail(email);
-    alert('Sent email');
+    if(email){
+      await sendPasswordResetEmail(email);
+    toast('Email sented');
+    }
+    else{
+      toast('Please enter your email address');
+    }
   }
 
   return (
     <div className="container py-3 w-50">
-      <h2 className="mt-5 text-primary fw-bold text-center">Login</h2>
+      <h2 className="mt-5 text-primary fw-bold text-center">Log In</h2>
       <Form noValidate validated={validated} onSubmit={handleSubmit}>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>
@@ -105,6 +118,7 @@ const Login = () => {
         </span>
       </p>
       <SocialLogin></SocialLogin>
+      <ToastContainer />
     </div>
   );
 };
