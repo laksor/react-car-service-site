@@ -17,7 +17,7 @@ const ServiceDetails = () => {
         <PageTitle title="Service Details"></PageTitle>
             <h1>You are about to book: {service.name}</h1>
             <Link to="/checkout">
-            <Button className='btn btn-primary'>Proces checkout</Button>
+            <Button className='btn btn-primary'>Process checkout</Button>
             </Link>
         </div>
     );
