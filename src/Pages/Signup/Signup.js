@@ -11,6 +11,7 @@ import { async } from "@firebase/util";
 import { updateProfile } from "firebase/auth";
 import Loading from "../Shared/Loading/Loading";
 import PageTitle from "../Shared/PageTitle/PageTitle";
+import './Signup.css';
 
 const Signup = () => {
   const [agree, setAgree] = useState(false);
@@ -55,71 +56,75 @@ const Signup = () => {
   }
 
   return (
-    <div className="container py-5 w-50">
+    <div>
     <PageTitle title="Signup"></PageTitle>
-      <h2 className="mt-5 text-primary fw-bold text-center">Sign up</h2>
-      <Form
-        className=""
-        noValidate
-        validated={validated}
-        onSubmit={handleSubmit}
+    <h2 className="signup-h1">Sign up</h2>
+    <div className="container py-5 w-50">
+   
+    <Form
+      className=""
+      noValidate
+      validated={validated}
+      onSubmit={handleSubmit}
+    >
+      <Form.Group className="mb-3">
+        <Form.Label>Your Name</Form.Label>
+        <Form.Control
+          type="text"
+          name="name"
+          placeholder="Your name"
+          required
+        />
+      </Form.Group>
+
+      <Form.Group className="mb-3" controlId="formBasicEmail">
+        <Form.Label>Email address</Form.Label>
+        <Form.Control
+          type="email"
+          name="email"
+          placeholder="Enter email"
+          required
+        />
+        <Form.Text className="text-muted">
+          We'll never share your email with anyone else.
+        </Form.Text>
+      </Form.Group>
+
+      <Form.Group className="mb-3" controlId="formBasicPassword">
+        <Form.Label>Password</Form.Label>
+        <Form.Control
+          type="password"
+          name="password"
+          placeholder="Password"
+          required
+        />
+      </Form.Group>
+      <Form.Group className="mb-3">
+        <Form.Check
+          onClick={() => setAgree(!agree)}
+          type="checkbox"
+          label="Accept terms and condition"
+        />
+      </Form.Group>
+      <Button className="btn btn-primary" type="submit" disabled={!agree}>
+        Signup
+      </Button>
+    </Form>
+
+    <p className="text-center">
+      Already have an account ?{" "}
+      <span
+        style={{ cursor: "pointer" }}
+        className="text-decoration-underline text-danger"
+        onClick={navigateLogin}
       >
-        <Form.Group className="mb-3">
-          <Form.Label>Your Name</Form.Label>
-          <Form.Control
-            type="text"
-            name="name"
-            placeholder="Your name"
-            required
-          />
-        </Form.Group>
-
-        <Form.Group className="mb-3" controlId="formBasicEmail">
-          <Form.Label>Email address</Form.Label>
-          <Form.Control
-            type="email"
-            name="email"
-            placeholder="Enter email"
-            required
-          />
-          <Form.Text className="text-muted">
-            We'll never share your email with anyone else.
-          </Form.Text>
-        </Form.Group>
-
-        <Form.Group className="mb-3" controlId="formBasicPassword">
-          <Form.Label>Password</Form.Label>
-          <Form.Control
-            type="password"
-            name="password"
-            placeholder="Password"
-            required
-          />
-        </Form.Group>
-        <Form.Group className="mb-3">
-          <Form.Check
-            onClick={() => setAgree(!agree)}
-            type="checkbox"
-            label="Accept terms and condition"
-          />
-        </Form.Group>
-        <Button className="btn btn-primary" type="submit" disabled={!agree}>
-          Signup
-        </Button>
-      </Form>
-
-      <p className="text-center">
-        Already have an account ?{" "}
-        <span
-          style={{ cursor: "pointer" }}
-          className="text-decoration-underline text-danger"
-          onClick={navigateLogin}
-        >
-          Please Login
-        </span>
-      </p>
-      <SocialLogin></SocialLogin>
+        Please Login
+      </span>
+    </p>
+    <SocialLogin></SocialLogin>
+  </div>
     </div>
+   
   );
 };
 
