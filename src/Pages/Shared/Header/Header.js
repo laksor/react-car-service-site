@@ -9,9 +9,9 @@ import logo from "../../../images/logo.png";
 const Header = () => {
   const [user] = useAuthState(auth);
 
-  const handleSignout = () =>{
+  const handleSignout = () => {
     signOut(auth);
-  }
+  };
   return (
     <>
       <Navbar
@@ -45,20 +45,28 @@ const Header = () => {
               </NavDropdown>
             </Nav>
             <Nav>
-            <Nav.Link as={Link} to="addservice">
-           Add Service
-          </Nav.Link>
               <Nav.Link as={Link} to="about">
                 About
               </Nav.Link>
-              {
-                user 
-                ?
-                <Button onClick={handleSignout} className="btn btn-danger">Sign out</Button>
-                :
-              <Nav.Link as={Link} to="login">
-                Login
-              </Nav.Link>}
+              {user && (
+                <>
+                  <Nav.Link as={Link} to="addservice">
+                    Add Service
+                  </Nav.Link>
+                  <Nav.Link as={Link} to="manageservice">
+                    Manage Service
+                  </Nav.Link>
+                </>
+              )}
+              {user ? (
+                <Button onClick={handleSignout} className="btn btn-danger">
+                  Sign out
+                </Button>
+              ) : (
+                <Nav.Link as={Link} to="login">
+                  Login
+                </Nav.Link>
+              )}
             </Nav>
           </Navbar.Collapse>
         </Container>

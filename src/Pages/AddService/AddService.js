@@ -29,7 +29,7 @@ const AddService = () => {
       <textarea className="mb-2" placeholder="Description" {...register("description")} />
       <input className="mb-2" placeholder="Price" type="number" {...register("price")} />
       <input className="mb-2" placeholder="Photo Url" type="text" {...register("img")} />
-      <input value="Add Service" type="submit" />
+      <button value="Add Service" type="submit" className="btn btn-primary">Add Service</button>
     </form>
     </div>
   );
