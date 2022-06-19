@@ -1,5 +1,6 @@
 import React from 'react';
 import useServices from '../hooks/useServices';
+import { ToastContainer, toast } from 'react-toastify';
 
 const ManageServices = () => {
     const [services, setServices] = useServices();
@@ -16,6 +17,7 @@ const ManageServices = () => {
                 console.log(data);
                 const remaining = services.filter(service => service._id !== id);
                 setServices(remaining);
+                toast('Service deleted');
             })
         }
     }
@@ -27,6 +29,7 @@ const ManageServices = () => {
                     <h4>{service.name} <button onClick={() => handleDelete(service._id)} className="btn btn-danger">Delete X</button></h4>
                     </div>)
             }
+            <ToastContainer />
         </div>
     );
 };

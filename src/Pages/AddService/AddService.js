@@ -1,11 +1,15 @@
 import React from "react";
 import { useForm } from "react-hook-form";
+import { ToastContainer, toast } from 'react-toastify';
 
 const AddService = () => {
   const { register, handleSubmit } = useForm();
 
   const onSubmit = (data) => {
     console.log(data);
+
+    const form = document.getElementById('form');
+    form.reset();
 
     const url = `http://localhost:5000/service`;
     fetch(url, {
@@ -19,18 +23,20 @@ const AddService = () => {
     .then(result => {
         console.log(result);
     })
+    toast('Service Added');
 };
 
   return (
     <div className="w-50 mx-auto">
       <h1>Please add a service </h1>
-      <form className="d-flex flex-column" onSubmit={handleSubmit(onSubmit)}>
+      <form id="form" className="d-flex flex-column" onSubmit={handleSubmit(onSubmit)}>
       <input className="mb-2" placeholder="Name" {...register("name", { required: true, maxLength: 20 })} />
       <textarea className="mb-2" placeholder="Description" {...register("description")} />
       <input className="mb-2" placeholder="Price" type="number" {...register("price")} />
       <input className="mb-2" placeholder="Photo Url" type="text" {...register("img")} />
       <button value="Add Service" type="submit" className="btn btn-primary">Add Service</button>
     </form>
+    <ToastContainer />
     </div>
   );
 };
