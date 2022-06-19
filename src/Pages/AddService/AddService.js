@@ -1,6 +1,7 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import { ToastContainer, toast } from 'react-toastify';
+import './AddService.css';
 
 const AddService = () => {
   const { register, handleSubmit } = useForm();
@@ -27,8 +28,9 @@ const AddService = () => {
 };
 
   return (
-    <div className="w-50 mx-auto">
-      <h1>Please add a service </h1>
+    <div>
+      <h1 className="addservice-h1">Add a Service </h1>
+      <div className="w-50 mx-auto">
       <form id="form" className="d-flex flex-column" onSubmit={handleSubmit(onSubmit)}>
       <input className="mb-2" placeholder="Name" {...register("name", { required: true, maxLength: 20 })} />
       <textarea className="mb-2" placeholder="Description" {...register("description")} />
@@ -36,6 +38,8 @@ const AddService = () => {
       <input className="mb-2" placeholder="Photo Url" type="text" {...register("img")} />
       <button value="Add Service" type="submit" className="btn btn-primary">Add Service</button>
     </form>
+      </div>
+     
     <ToastContainer />
     </div>
   );

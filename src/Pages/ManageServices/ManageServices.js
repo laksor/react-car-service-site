@@ -1,6 +1,7 @@
 import React from 'react';
 import useServices from '../hooks/useServices';
 import { ToastContainer, toast } from 'react-toastify';
+import './ManageServices.css';
 
 const ManageServices = () => {
     const [services, setServices] = useServices();
@@ -22,13 +23,16 @@ const ManageServices = () => {
         }
     }
     return (
-        <div className='w-50 mx-auto py-5'>
-            <h2 className='mb-4'>Manage your services</h2>
+        <div>
+            <h2 className='mb-4 manageservices-h1'>Manage Services</h2>
+            <div  className='w-50 mx-auto py-5'>
             {
                 services.map( service => <div key={service._id}>
                     <h4>{service.name} <button onClick={() => handleDelete(service._id)} className="btn btn-danger">Delete X</button></h4>
                     </div>)
             }
+            </div>
+            
             <ToastContainer />
         </div>
     );
