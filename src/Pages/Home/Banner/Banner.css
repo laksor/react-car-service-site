@@ -1,0 +1,67 @@
+.h {
+  height: 870px;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .h {
+    height: 100%;
+  }
+}
+@media (max-width: 767px) {
+  .h {
+    height: 100%;
+  }
+}
+
+.carousel-itemm {
+  position: relative;
+}
+.carousel-itemm::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--primary);
+  opacity: 0.7;
+}
+
+.carousel-caption h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: white;
+  font-family: 'Prata', serif;
+}
+.carousel-caption p {
+  font-size: 10px;
+  top: 2rem;
+  color: white;
+  font-family: 'Prata', serif;
+}
+.carousel-caption a button{
+    display: inline-block;
+    font-size: 5px;
+}
+
+@media only screen and (min-width: 1200px) {
+  .carousel-caption {
+    bottom: 330px;
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+  .carousel-caption h3 {
+    font-size: 85px;
+    font-weight: 700;
+   color: white;
+  }
+  .carousel-caption p {
+    font-size: 20px;
+    top: 2rem;
+    color: white;
+  }
+  .carousel-caption a button{
+   
+    font-size: 15px;
+}
+}

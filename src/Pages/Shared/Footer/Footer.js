@@ -1,31 +1,32 @@
 import React from 'react';
+import logo from "../../../images/logo.png";
 import './Footer.css';
 
 const Footer = () => {
     const today = new Date();
     const year = today.getFullYear();
     return (
-<footer class="footer-area footer-one ">
-   <div class="footer-widget">
-      <div class="container">
-         <div class="row">
-            <div class="col-xl-6 col-lg-4 col-sm-12">
-               <div class="f-about">
-                  <div class="footer-logo">
-                     <a href="javascript:void(0)">
-                     <img src="https://cdn.ayroui.com/1.0/images/footer/logo.svg" alt="Logo" />
+<footer className="footer-area footer-one ">
+   <div className="footer-widget">
+      <div className="container">
+         <div className="row">
+            <div className="col-xl-6 col-lg-4 col-sm-12">
+               <div className="f-about">
+                  <div className="footer-logo">
+                     <a href="/">
+                     <img src={logo} alt="Logo" />
                      </a>
                   </div>
-                  <p class="text">
+                  <p className="text">
                      Lorem Ipsum is simply dummy text of the printing and
                      typesetting industry.
                   </p>
                </div>
-               <div class="footer-app-store">
-                  <h5 class="download-title">Download Our App Now!</h5>
+               <div className="footer-app-store">
+                  <h5 className="download-title">Download Our App Now!</h5>
                   <ul>
                      <li>
-                        <a href="javascript:void(0)">
+                        <a href="/">
                         <img
                            src="https://cdn.ayroui.com/1.0/images/footer/app-store.svg"
                            alt="app"
@@ -33,7 +34,7 @@ const Footer = () => {
                         </a>
                      </li>
                      <li>
-                        <a href="javascript:void(0)">
+                        <a href="/">
                         <img
                            src="https://cdn.ayroui.com/1.0/images/footer/play-store.svg"
                            alt="play"
@@ -43,41 +44,41 @@ const Footer = () => {
                   </ul>
                </div>
             </div>
-            <div class="col-xl-2 col-lg-2 col-sm-4">
-               <div class="footer-link">
-                  <h6 class="footer-title">Company</h6>
+            <div className="col-xl-2 col-lg-2 col-sm-4">
+               <div className="footer-link">
+                  <h6 className="footer-title">Company</h6>
                   <ul>
-                     <li><a href="javascript:void(0)">About</a></li>
-                     <li><a href="javascript:void(0)">Contact</a></li>
-                     <li><a href="javascript:void(0)">Marketing</a></li>
-                     <li><a href="javascript:void(0)">Awards</a></li>
+                     <li><a href="/about">About</a></li>
+                     <li><a href="/">Contact</a></li>
+                     <li><a href="home#service">Services</a></li>
+                     <li><a href="home#experts">Experts</a></li>
                   </ul>
                </div>
         
             </div>
-            <div class="col-xl-2 col-lg-3 col-sm-4">
-               <div class="footer-link">
-                  <h6 class="footer-title">Services</h6>
+            <div className="col-xl-2 col-lg-3 col-sm-4">
+               <div className="footer-link">
+                  <h6 className="footer-title">Services</h6>
                   <ul>
-                     <li><a href="javascript:void(0)">Products</a></li>
-                     <li><a href="javascript:void(0)">Business</a></li>
-                     <li><a href="javascript:void(0)">Developer</a></li>
-                     <li><a href="javascript:void(0)">Insights</a></li>
+                     <li><a href="/">Products</a></li>
+                     <li><a href="/">Business</a></li>
+                     <li><a href="/">Developer</a></li>
+                     <li><a href="/">Insights</a></li>
                   </ul>
                </div>
          
             </div>
-            <div class="col-xl-2 col-lg-3 col-sm-4">
+            <div className="col-xl-2 col-lg-3 col-sm-4">
       
-               <div class="footer-contact">
-                  <h6 class="footer-title">Help & Suuport</h6>
+               <div className="footer-contact">
+                  <h6 className="footer-title">Help & Suuport</h6>
                   <ul>
                      <li>
-                        <i class="lni lni-map-marker"></i> Madison Street, NewYork,
+                        <i className="lni lni-map-marker"></i> Madison Street, NewYork,
                         USA
                      </li>
-                     <li><i class="lni lni-phone-set"></i> +88 556 88545</li>
-                     <li><i class="lni lni-envelope"></i> support@ayroui.com</li>
+                     <li><i className="lni lni-phone-set"></i> +88 556 88545</li>
+                     <li><i className="lni lni-envelope"></i> support@thecardoctor.com</li>
                   </ul>
                </div>
         
@@ -88,12 +89,12 @@ const Footer = () => {
  
    </div>
  
-   <div class="footer-copyright">
-      <div class="container">
-         <div class="row">
-            <div class="col-lg-12">
+   <div className="footer-copyright">
+      <div className="container">
+         <div className="row">
+            <div className="col-lg-12">
                <div
-                  class="
+                  className="
                   copyright
                   text-center
                   d-md-flex
@@ -101,26 +102,26 @@ const Footer = () => {
                   align-items-center
                   "
                   >
-                  <p class="text">Copyright © {year} The Car Doctor. All Rights Reserved - Developed by <a href=''>Ahmed Laskor</a></p>
-                  <ul class="social">
+                  <p className="text">Copyright © {year} The Car Doctor. All Rights Reserved - Developed by <a href='https://github.com/laksor' target="_blank">Ahmed Laskor</a></p>
+                  <ul className="social">
                      <li>
-                        <a href="javascript:void(0)">
-                        <i class="lni lni-facebook-filled"></i>
+                        <a href="/">
+                        <i className="lni lni-facebook-filled"></i>
                         </a>
                      </li>
                      <li>
-                        <a href="javascript:void(0)">
-                        <i class="lni lni-twitter-original"></i>
+                        <a href="/">
+                        <i className="lni lni-twitter-original"></i>
                         </a>
                      </li>
                      <li>
-                        <a href="javascript:void(0)">
-                        <i class="lni lni-instagram-filled"></i>
+                        <a href="/">
+                        <i className="lni lni-instagram-filled"></i>
                         </a>
                      </li>
                      <li>
-                        <a href="javascript:void(0)"
-                           ><i class="lni lni-linkedin-original"></i
+                        <a href="/"
+                           ><i className="lni lni-linkedin-original"></i
                            ></a>
                      </li>
                   </ul>
