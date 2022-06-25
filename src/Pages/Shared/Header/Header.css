@@ -2,3 +2,11 @@
     font-size: 18px;
     font-weight: 700;
 }
+.btn-new{
+    border: 1px solid #ffff07;
+    color: white;
+}
+.btn-new:hover{
+   background-color: #ffc107;
+   color: black;
+}

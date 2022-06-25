@@ -2,17 +2,21 @@ import { signOut } from "firebase/auth";
 import React from "react";
 import { Button, Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import { useAuthState } from "react-firebase-hooks/auth";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import auth from "../../../firebase.init";
 import logo from "../../../images/logo.png";
 import './Header.css';
 
 const Header = () => {
   const [user] = useAuthState(auth);
+  const navigate = useNavigate();
 
   const handleSignout = () => {
     signOut(auth);
   };
+  const handleNavigateC = () =>{
+    navigate(`/contact`);
+  }
   return (
     <>
       <Navbar
@@ -22,6 +26,7 @@ const Header = () => {
         bg="primary"
         variant="dark"
         className="p-4"
+
       >
         <Container>
           <Navbar.Brand as={Link} to="/">
@@ -29,27 +34,24 @@ const Header = () => {
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="me-auto">
+            <Nav className="me-auto ">
+            <Nav.Link as={Link} to="home">
+                Home
+              </Nav.Link>
               <Nav.Link href="home#services">Services</Nav.Link>
               <Nav.Link href="home#experts">Experts</Nav.Link>
-              <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
-                <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2">
-                  Another action
-                </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">
-                  Something
-                </NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#action/3.4">
-                  Separated link
-                </NavDropdown.Item>
-              </NavDropdown>
-            </Nav>
-            <Nav>
               <Nav.Link as={Link} to="about">
                 About
               </Nav.Link>
+              <Nav.Link href="home#contact">
+                Contact
+              </Nav.Link>
+              <Nav.Link as={Link} to="/">
+                Blogs
+              </Nav.Link>
+            </Nav>
+            <Nav>
+             
               {user && (
                 <>
                   <Nav.Link as={Link} to="addservice">
@@ -61,7 +63,7 @@ const Header = () => {
                 </>
               )}
               {user ? (
-                <Button onClick={handleSignout} className="btn btn-danger">
+                <Button onClick={handleSignout} className="btn btn-danger rounded-pill">
                   Sign out
                 </Button>
                 
@@ -69,7 +71,10 @@ const Header = () => {
                 <Nav.Link as={Link} to="login">
                   Login
                 </Nav.Link>
+                
               )}
+              {!user && (<button className="btn btn-new rounded-pill mx-3" onClick={handleNavigateC}>Get a quote</button>)}
+             
             </Nav>
           </Navbar.Collapse>
         </Container>

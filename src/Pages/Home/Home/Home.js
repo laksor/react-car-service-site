@@ -10,6 +10,7 @@ import Features from "../Features/Features";
 import Services from "../Services/Services";
 
 import './Home.css';
+import Contact from "../../Contact/Contact";
 
 const Home = () => {
   return (
@@ -22,7 +23,7 @@ const Home = () => {
       <Cta></Cta>
       <Video></Video>
       <Blogs></Blogs>
-      
+      <Contact></Contact>
       </>
   );
 };

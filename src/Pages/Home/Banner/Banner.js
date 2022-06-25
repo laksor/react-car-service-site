@@ -23,7 +23,7 @@ const Banner = () => {
             efficient auto repair service.
           </p>
           <a href="/about"><button className="btn btn-danger rounded-pill m-2">Our Services</button></a>
-          <a href="/"><button className="btn btn-warning rounded-pill">Get a quote</button></a>
+          <a href="home#email"><button className="btn btn-warning rounded-pill">Get Discount</button></a>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item className="carousel-itemm">
@@ -36,7 +36,7 @@ const Banner = () => {
             experience.
           </p>
           <a href="/about"><button className="btn btn-danger rounded-pill m-2">Our Services</button></a>
-          <a href="/"><button className="btn btn-warning rounded-pill">Get a quote</button></a>
+          <a href="home#email"><button className="btn btn-warning rounded-pill">Get Discount</button></a>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item className="carousel-itemm">
@@ -49,7 +49,7 @@ const Banner = () => {
             diagnostic equipment.
           </p>
           <a href="/about"><button className="btn btn-danger rounded-pill m-2">Our Services</button></a>
-          <a href="/"><button className="btn btn-warning rounded-pill">Get a quote</button></a>
+          <a href="home#email"><button className="btn btn-warning rounded-pill">Get Discount</button></a>
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>

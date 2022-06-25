@@ -3,7 +3,7 @@ import './Cta.css';
 
 const Cta = () => {
     return (
-        <div className='bg'>
+        <div id='email' className='bg'>
  
         <section class="call-action-area call-action-one bg">
            <div class="container">
@@ -19,9 +19,9 @@ const Cta = () => {
                     </div>
                  </div>
                  <div class="col-12 box">
-                 <form>
+                 <form autocomplete="off">
                  <div className='form-box'>
-                 <input type="text" name='EmailAddress' placeholder='Enter your email'></input>
+                 <input type="text" name='EmailAddress' placeholder='Enter your email'  autocomplete="nope"></input>
                  <button  type="submit">Subscribe</button>
                  </div>
                  </form>
