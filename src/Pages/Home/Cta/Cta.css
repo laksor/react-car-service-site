@@ -1,13 +1,18 @@
 /* ===== Buttons Css ===== */
+.bg{
+  background-color: rgb(254, 174, 0)  !important;
+}
 .call-action-one .call-action-content .call-action-btn .primary-btn {
     background: var(--primary);
     color: var(--white);
     box-shadow: var(--shadow-2);
+  
   }
   .call-action-one .call-action-content .call-action-btn .active.primary-btn, .call-action-one .call-action-content .call-action-btn .primary-btn:hover, .call-action-one .call-action-content .call-action-btn .primary-btn:focus {
     background: var(--primary-dark);
     color: var(--white);
     box-shadow: var(--shadow-4);
+ 
   }
   .call-action-one .call-action-content .call-action-btn .deactive.primary-btn {
     background: var(--gray-4);

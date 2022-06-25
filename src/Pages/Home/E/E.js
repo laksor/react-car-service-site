@@ -8,7 +8,7 @@ import experts3 from '../../../images/experts/expert-3.jpg';
 const E = () => {
     return (
         <div className='bg-light p-5'>
-        <h1 className='text-center heading mb-4'>Our Experts</h1>
+        <h1 className='text-center heading mb-4'>Our Ceative Experts</h1>
         <section className="team-area mb-5">
         <div className="container">
            <div className="row">

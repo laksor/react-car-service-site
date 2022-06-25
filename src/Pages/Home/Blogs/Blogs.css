@@ -1,4 +1,19 @@
 /*===== BLOG STYLE ONE =====*/
+.heading{
+  font-family: 'Prata', serif;
+}
+.heading::after{
+  content: '';
+  width: 0;
+  height: 4px;
+  background-color: var(--primary);
+  margin: 10px  auto;
+  display: block;
+  width: 7%;
+  border-radius: 1000px 1000px 1000px 1000px;
+}
+
+
 .blog-style-one {
     margin-top: 50px;
   }

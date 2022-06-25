@@ -3,9 +3,9 @@ import './Cta.css';
 
 const Cta = () => {
     return (
-        <div>
+        <div className='bg'>
  
-        <section class="call-action-area call-action-one">
+        <section class="call-action-area call-action-one bg">
            <div class="container">
               <div class="row align-items-center call-action-content">
                  <div class="col-12 text-center">
