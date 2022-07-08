@@ -33,17 +33,18 @@ const Login = () => {
     }
 
   if (user) {
-    navigate(from, { replace: true });
+    // navigate(from, { replace: true });
   }
 
   const [validated, setValidated] = useState(false);
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async(event) => {
     event.preventDefault();
     const email = emailRef.current.value;
     const pass = passRef.current.value;
 
-    signInWithEmailAndPassword(email, pass);
+    await signInWithEmailAndPassword(email, pass);
+    const{data} = await axios.post('', {email});
 
     const form = event.currentTarget;
     if (form.checkValidity() === false) {
