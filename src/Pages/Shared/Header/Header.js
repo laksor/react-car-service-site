@@ -25,7 +25,7 @@ const Header = () => {
         sticky="top"
         bg="primary"
         variant="dark"
-        className="p-4"
+        className="p-4 shadow"
 
       >
         <Container>
@@ -63,9 +63,11 @@ const Header = () => {
                 </>
               )}
               {user ? (
+                <> 
                 <Button onClick={handleSignout} className="btn btn-danger rounded-pill">
                   Sign out
-                </Button>
+                </Button></>
+                
                 
               ) : (
                 <Nav.Link as={Link} to="login">
@@ -73,7 +75,7 @@ const Header = () => {
                 </Nav.Link>
                 
               )}
-              {!user && (<button className="btn btn-new rounded-pill mx-3" onClick={handleNavigateC}>Get a quote</button>)}
+              {!user && (<button className="btn btn-new rounded-pill mx-3" onClick={handleNavigateC}>Let's Talk</button>)}
              
             </Nav>
           </Navbar.Collapse>
