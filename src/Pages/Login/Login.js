@@ -9,6 +9,7 @@ import Loading from "../Shared/Loading/Loading";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import PageTitle from "../Shared/PageTitle/PageTitle";
+import axios from "axios";
 
 const Login = () => {
   
@@ -44,7 +45,9 @@ const Login = () => {
     const pass = passRef.current.value;
 
     await signInWithEmailAndPassword(email, pass);
-    const{data} = await axios.post('', {email});
+    const{data} = await axios.post('http://localhost:5000/login', {email});
+    localStorage.setItem('accessToken', data.accessToken);
+    navigate(from, { replace: true });
 
     const form = event.currentTarget;
     if (form.checkValidity() === false) {
