@@ -1,5 +1,6 @@
 import React from 'react';
 import PageTitle from '../../Shared/PageTitle/PageTitle';
+import './Checkout.css';
 
 const Checkout = () => {
     return (

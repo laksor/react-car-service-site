@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import { ToastContainer, toast } from 'react-toastify';
 import './AddService.css';
 
+
 const AddService = () => {
   const { register, handleSubmit } = useForm();
 
@@ -29,7 +30,9 @@ const AddService = () => {
 
   return (
     <div>
+   
       <h1 className="addservice-h1">Add a Service </h1>
+      
       <div className="w-50 mx-auto">
       <form id="form" className="d-flex flex-column" onSubmit={handleSubmit(onSubmit)}>
       <input className="mb-2" placeholder="Name" {...register("name", { required: true, maxLength: 20 })} />

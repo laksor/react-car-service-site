@@ -18,6 +18,7 @@ const Home = () => {
     <PageTitle title="Home"></PageTitle>
       <Banner></Banner>
       <Features></Features>
+      <Services></Services>
       <Clients></Clients>
       <E></E>
       <Cta></Cta>

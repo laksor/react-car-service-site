@@ -17,7 +17,7 @@ const ServiceDetails = () => {
     <div>
       <h1 className="service-h1">Service Details</h1>
       <PageTitle title="service details"></PageTitle>
-      <div className="card mx-auto" style={{ width: "40rem" }}>
+      <div className="card mx-auto mb-5" style={{ width: "40rem" }}>
         <img className="card-img-top" src={service.img}></img>
         <div className="card-body text-center">
           <h3 className="card-title">{service.name}</h3>
