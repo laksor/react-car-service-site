@@ -28,7 +28,10 @@ const ManageServices = () => {
             <div  className='w-50 mx-auto py-5'>
             {
                 services.map( service => <div key={service._id}>
-                    <h4>{service.name} <button onClick={() => handleDelete(service._id)} className="btn btn-danger">Delete X</button></h4>
+                    <h4 style={{display: 'flex', padding: '30px', margin: '6px'}}>{service.name}
+                     <p style={{paddingLeft: '30px', paddingRight: '30px'}}>{service.description}</p> 
+                     <img src={service.img}></img>
+                     <button onClick={() => handleDelete(service._id)} className="btn btn-danger">Delete X</button></h4>
                     </div>)
             }
             </div>
