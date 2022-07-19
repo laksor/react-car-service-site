@@ -1,18 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { Button } from "react-bootstrap";
 import { Link, useParams } from "react-router-dom";
+import useServiceDetails from "../hooks/useServiceDetails";
 import PageTitle from "../Shared/PageTitle/PageTitle";
 import "./ServiceDetails.css";
 
 const ServiceDetails = () => {
   const { serviceId } = useParams();
-  const [service, setService] = useState({});
-  useEffect(() => {
-    const url = `http://localhost:5000/service/${serviceId}`;
-    fetch(url)
-      .then((res) => res.json())
-      .then((data) => setService(data));
-  }, []);
+  const [service] = useServiceDetails(serviceId);
   return (
     <div>
       <h1 className="service-h1">Service Details</h1>
@@ -24,7 +19,7 @@ const ServiceDetails = () => {
 
           <p className="card-text">{service.description}</p>
           <p>Price : {service.price}</p>
-          <Link to="/checkout">
+          <Link to={`/checkout/${serviceId}`}>
             <Button className="btn btn-primary">Process checkout</Button>
           </Link>
         </div>
