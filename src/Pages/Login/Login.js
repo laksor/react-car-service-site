@@ -9,7 +9,7 @@ import Loading from "../Shared/Loading/Loading";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import PageTitle from "../Shared/PageTitle/PageTitle";
-import axios from "axios";
+import useToken from "../hooks/useToken";
 
 const Login = () => {
   
@@ -25,7 +25,7 @@ const Login = () => {
     
 
     const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
-
+    const [token] = useToken(user);
     let errorElement;
 
     if (error) {
@@ -33,8 +33,8 @@ const Login = () => {
       errorElement = <p className="text-danger mt-2">Error: {error.message}</p>
     }
 
-  if (user) {
-    // navigate(from, { replace: true });
+  if (token) {
+    navigate(from, { replace: true });
   }
 
   const [validated, setValidated] = useState(false);
@@ -45,9 +45,6 @@ const Login = () => {
     const pass = passRef.current.value;
 
     await signInWithEmailAndPassword(email, pass);
-    const {data} = await axios.post('http://localhost:5000/login', {email});
-    localStorage.setItem('accessToken', data.accessToken);
-    navigate(from, { replace: true });
 
     const form = event.currentTarget;
     if (form.checkValidity() === false) {

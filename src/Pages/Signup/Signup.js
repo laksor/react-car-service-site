@@ -12,6 +12,7 @@ import { updateProfile } from "firebase/auth";
 import Loading from "../Shared/Loading/Loading";
 import PageTitle from "../Shared/PageTitle/PageTitle";
 import './Signup.css';
+import useToken from "../hooks/useToken";
 
 const Signup = () => {
   const [agree, setAgree] = useState(false);
@@ -20,6 +21,8 @@ const Signup = () => {
   const [updateProfile, updating] = useUpdateProfile(auth);
 
   const navigate = useNavigate();
+
+  const [token] = useToken(user);
 
   const [validated, setValidated] = useState(false);
 
@@ -51,8 +54,8 @@ const Signup = () => {
     return <Loading></Loading>
   }
 
-  if (user) {
-    console.log(user);
+  if (token) {
+    navigate('/login');
   }
 
   return (
