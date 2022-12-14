@@ -35,7 +35,7 @@ const Banner = () => {
             Our highly skilled technicians offer comprehensive knowledge and
             experience.
           </p>
-          <a href="/about"><button className="btn btn-danger rounded-pill m-2">Our Services</button></a>
+          <a href="/serv"><button className="btn btn-danger rounded-pill m-2">Our Services</button></a>
           <a href="home#email"><button className="btn btn-warning rounded-pill">Get Discount</button></a>
         </Carousel.Caption>
       </Carousel.Item>
@@ -48,7 +48,7 @@ const Banner = () => {
             You can be sure that your car will be handled with the latest
             diagnostic equipment.
           </p>
-          <a href="/about"><button className="btn btn-danger rounded-pill m-2">Our Services</button></a>
+          <a href="/services"><button className="btn btn-danger rounded-pill m-2">Our Services</button></a>
           <a href="home#email"><button className="btn btn-warning rounded-pill">Get Discount</button></a>
         </Carousel.Caption>
       </Carousel.Item>

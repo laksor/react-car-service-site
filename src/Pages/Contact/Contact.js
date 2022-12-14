@@ -1,4 +1,5 @@
 import React from 'react';
+import Cta from '../Home/Cta/Cta';
 import './Contact.css';
 
 const Contact = () => {
@@ -169,7 +170,7 @@ const Contact = () => {
          
            </div>
         </section>
-      
+      <Cta></Cta>
         </div>
     );
 };

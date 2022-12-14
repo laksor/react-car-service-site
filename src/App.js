@@ -15,6 +15,10 @@ import AddService from "./Pages/AddService/AddService";
 import ManageServices from "./Pages/ManageServices/ManageServices";
 import Contact from "./Pages/Contact/Contact";
 import Order from "./Pages/Order/Order";
+import Services from "./Pages/Home/Services/Services";
+import Blogs from "./Pages/Home/Blogs/Blogs";
+import E from "./Pages/Home/E/E";
+import Serv from "./Pages/Serv";
 
 function App() {
   return (
@@ -22,12 +26,15 @@ function App() {
       <Header></Header>
       <Routes>
         <Route path="/" element={<Home></Home>}></Route>
-        <Route path="/home" element={<Home></Home>}></Route>
+        <Route path="/services" element={<Services></Services>}></Route>
+        <Route path="/serv" element={<Serv></Serv>}></Route>
+        <Route path="/experts" element={<E></E>}></Route>
         <Route
           path="/service/:serviceId"
           element={<ServiceDetails></ServiceDetails>}
         ></Route>
         <Route path="/about" element={<About></About>}></Route>
+        <Route path="/blogs" element={<Blogs></Blogs>}></Route>
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path="/signup" element={<Signup></Signup>}></Route>
         <Route

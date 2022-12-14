@@ -34,7 +34,7 @@ const AddService = () => {
       <h1 className="addservice-h1">Add a Service </h1>
       
       <div className="w-50 mx-auto">
-      <form id="form" className="d-flex flex-column" onSubmit={handleSubmit(onSubmit)}>
+      <form id="form" className="d-flex flex-column mb-5" onSubmit={handleSubmit(onSubmit)}>
       <input className="mb-2" placeholder="Name" {...register("name", { required: true, maxLength: 20 })} />
       <textarea className="mb-2" placeholder="Description" {...register("description")} />
       <input className="mb-2" placeholder="Price" type="number" {...register("price")} />

@@ -14,7 +14,7 @@ const Blogs = () => {
                           <a href="/"
                              ><img src="https://cdn.ayroui.com/1.0/images/blog/1.jpg" alt="Blog"
                              /></a>
-                          <a href="/" className="category text-decoration-none">Technology</a>
+                          
                        </div>
                        <div className="blog-content">
                           <h5 className="blog-title">
@@ -39,7 +39,7 @@ const Blogs = () => {
                           <a href="/"
                              ><img src="https://cdn.ayroui.com/1.0/images/blog/2.jpg" alt="Blog"
                              /></a>
-                          <a href="/" className="category text-decoration-none">Lifestyle</a>
+                          
                        </div>
                        <div className="blog-content">
                           <h5 className="blog-title">
@@ -64,7 +64,7 @@ const Blogs = () => {
                           <a href="/"
                              ><img src="https://cdn.ayroui.com/1.0/images/blog/3.jpg" alt="Blog"
                              /></a>
-                          <a href="/" className="category text-decoration-none">Science</a>
+                          
                        </div>
                        <div className="blog-content">
                           <h5 className="blog-title">

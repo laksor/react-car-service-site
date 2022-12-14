@@ -6,6 +6,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../../firebase.init";
 import { useNavigate } from "react-router-dom";
 import { signOut } from "firebase/auth";
+import './Order.css';
 
 const Order = () => {
   const [user] = useAuthState(auth);
@@ -32,15 +33,19 @@ const Order = () => {
     getOrders();
   }, [user]);
   return (
-    <div className="w-50 mx-auto mt-3">
+    <div>
+    <h2 className='mb-4 order-h1'>Your Orders</h2>
+    
+    <div className="w-50 mx-auto mt-3 p-3">
       <h2>Orders : {orders.length}</h2>
       {orders.map((order) => (
-        <div className="d-flex p-2" key={order._id}>
-          <p>{order.email}</p>
-          <p>{order.service}</p>
-          <p>{order.address}</p>
+        <div className="p-3" key={order._id}>
+          <p>Email : {order.email}</p>
+          <p>Item name : {order.service}</p>
+          <p>Address : {order.address}</p>
         </div>
       ))}
+    </div>
     </div>
   );
 };
