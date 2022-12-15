@@ -13,7 +13,7 @@ const AddService = () => {
     const form = document.getElementById('form');
     form.reset();
 
-    const url = `http://localhost:5000/service`;
+    const url = `https://car-service-sserver.onrender.com/service`;
     fetch(url, {
         method: 'POST',
         headers: {
