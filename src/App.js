@@ -26,46 +26,46 @@ function App() {
       <Header></Header>
       <Routes>
         <Route path="/" element={<Home></Home>}></Route>
-        <Route path="/services" element={<Services></Services>}></Route>
-        <Route path="/serv" element={<Serv></Serv>}></Route>
-        <Route path="/experts" element={<E></E>}></Route>
+        <Route path="services" element={<Services></Services>}></Route>
+        <Route path="serv" element={<Serv></Serv>}></Route>
+        <Route path="experts" element={<E></E>}></Route>
         <Route
-          path="/service/:serviceId"
+          path="service/:serviceId"
           element={<ServiceDetails></ServiceDetails>}
         ></Route>
-        <Route path="/about" element={<About></About>}></Route>
-        <Route path="/blogs" element={<Blogs></Blogs>}></Route>
-        <Route path="/login" element={<Login></Login>}></Route>
-        <Route path="/signup" element={<Signup></Signup>}></Route>
+        <Route path="about" element={<About></About>}></Route>
+        <Route path="blogs" element={<Blogs></Blogs>}></Route>
+        <Route path="login" element={<Login></Login>}></Route>
+        <Route path="signup" element={<Signup></Signup>}></Route>
         <Route
-          path="/checkout/:serviceId"
+          path="checkout/:serviceId"
           element={
             <RequireAuth>
               <Checkout></Checkout>
             </RequireAuth>
           }></Route>
           <Route
-          path="/addservice"
+          path="addservice"
           element={
             <RequireAuth>
               <AddService></AddService>
             </RequireAuth>
           }></Route>
           <Route
-          path="/manageservice"
+          path="manageservice"
           element={
             <RequireAuth>
               <ManageServices></ManageServices>
             </RequireAuth>
           }></Route>
           <Route
-          path="/orders"
+          path="orders"
           element={
             <RequireAuth>
               <Order></Order>
             </RequireAuth>
           }></Route>
-          <Route path="/contact" element={<Contact></Contact>}></Route>
+          <Route path="contact" element={<Contact></Contact>}></Route>
         <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>

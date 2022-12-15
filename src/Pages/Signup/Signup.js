@@ -94,7 +94,6 @@ const Signup = () => {
       </Form.Group>
 
       <Form.Group className="mb-3" controlId="formBasicPassword">
-        <Form.Label>Password</Form.Label>
         <Form.Control
           type="password"
           name="password"
