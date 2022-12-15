@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "build/react-car-service-site",
+    "public": "build/car-mama",
     "ignore": [
       "firebase.json",
       "**/.*",
@@ -11,6 +11,3 @@
         "source": "**",
         "destination": "/index.html"
       }
-    ]
-  }
-}
