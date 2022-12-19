@@ -7,7 +7,7 @@ const Service = ({ service }) => {
   const navigate = useNavigate();
 
   const navigateToDetails = id =>{
-    navigate(`/${id}`);
+    navigate(`/service/${id}`);
   }
   return (
     <div className="g-5 gx-5 col-sm-12 col-md-6 col-lg-4 text-center">
