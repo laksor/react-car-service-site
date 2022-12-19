@@ -7,7 +7,7 @@ const Service = ({ service }) => {
   const navigate = useNavigate();
 
   const navigateToDetails = id =>{
-    navigate(`https://react-car-service-site.vercel.app/service/${id}`);
+    navigate(`/${id}`);
   }
   return (
     <div className="g-5 gx-5 col-sm-12 col-md-6 col-lg-4 text-center">
