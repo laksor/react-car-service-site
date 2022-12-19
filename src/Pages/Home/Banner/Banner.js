@@ -23,7 +23,7 @@ const Banner = () => {
             efficient auto repair service.
           </p>
           <a href="/service"><button className="btn btn-danger rounded-pill m-2">Our Services</button></a>
-          <a href="home#email"><button className="btn btn-warning rounded-pill">Get Discount</button></a>
+          <a href="/#email"><button className="btn btn-warning rounded-pill">Get Discount</button></a>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item className="carousel-itemm">

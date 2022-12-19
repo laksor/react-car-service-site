@@ -19,7 +19,6 @@ import Services from "./Pages/Home/Services/Services";
 import Blogs from "./Pages/Home/Blogs/Blogs";
 import E from "./Pages/Home/E/E";
 import Serv from "./Pages/Serv";
-import Service from "./Pages/Home/Service/Service";
 
 function App() {
   return (
