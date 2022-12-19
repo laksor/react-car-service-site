@@ -1,5 +1,5 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { Navigate, useParams } from 'react-router-dom';
 import useServiceDetails from '../../hooks/useServiceDetails';
 import PageTitle from '../../Shared/PageTitle/PageTitle';
 import './Checkout.css';
@@ -30,6 +30,7 @@ const Checkout = () => {
             const {data} = response;
             if(data.insertedId){
                 toast('Order placed');
+            
                 event.target.reset();
             }
         })
