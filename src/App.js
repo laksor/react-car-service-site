@@ -28,7 +28,6 @@ function App() {
       <Routes>
         <Route path="/" element={<Home></Home>}></Route>
         <Route path="services" element={<Services></Services>}></Route>
-        <Route path="service" element={<Service></Service>}></Route>
         <Route path="experts" element={<E></E>}></Route>
         <Route
           path="service/:serviceId"
