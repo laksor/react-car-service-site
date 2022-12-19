@@ -22,7 +22,7 @@ const Banner = () => {
             The car doctor is your best source for professional, reliable, and
             efficient auto repair service.
           </p>
-          <a href="/about"><button className="btn btn-danger rounded-pill m-2">Our Services</button></a>
+          <a href="/service"><button className="btn btn-danger rounded-pill m-2">Our Services</button></a>
           <a href="home#email"><button className="btn btn-warning rounded-pill">Get Discount</button></a>
         </Carousel.Caption>
       </Carousel.Item>
