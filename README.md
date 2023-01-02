@@ -52,7 +52,7 @@ Here users can create an account using Email and Password. Users can also use so
   <li>React Router 6</li>
   <li>React Firebase Hooks</li>
   <li>React Toastify</li>
-  <li>JWT ()</li>
+  <li>JWT (  JSON Web Token )</li>
   <li>AXIOS</li>
   <li>React Bootstrap</li>
   <li>Bootstrap 5.2</li>
