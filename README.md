@@ -4,7 +4,7 @@
 <p>
 The Car Doctor is a Fully Responsive React website built on Bootstrap 5 & Pure React js. It’s a modern React website which can be used for Modern Auto Car Repair Business. it has car repair services where user can order services and checkout.
 
-Here users can create an account using Email and Password. Users can also use social media like Google and GitHub to log in. Users can do CRUD Operation where they can ( Add Services, they can Manage service & can delete services ). Users can Order a service . It will take user to the Checkout page . After ordering These service can be viewed from Order page. 
+Here users can create an account using Email and Password. Users can also use social media like Google and GitHub to log in. Users can do CRUD Operation where they can ( Add Services, they can Manage services & can delete services ). Users can Order a service . It will take user to the Checkout page . After ordering , These services can be viewed from Order page. 
 </p>
 
 <h2>Website Live Link</h2><a href="https://ahmed-car-service-site.onrender.com/" rel="nofollow">https://ahmed-car-service-site.onrender.com/</a>
@@ -16,11 +16,10 @@ Here users can create an account using Email and Password. Users can also use so
 <h2>Features and Functionality</h2>
 
 <ul> 
-  <li>  </li>
-  <li>  </li>
-  <li>  </li>
-  <li>  </li>
-  <li> </li>
+  <li> CRUD operations ( Add , Manage and Delete services) </li>
+  <li> Authentication ( Firebase, JWT ) </li>
+  <li> Email verification & Reset password </li>
+  <li> User can Place order </li>
 </ul>
 
 <h2>Used Technology</h2>
