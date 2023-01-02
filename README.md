@@ -19,7 +19,8 @@ Here users can create an account using Email and Password. Users can also use so
   <li> CRUD operations ( Add , Manage and Delete services) </li>
   <li> Authentication ( Firebase, JWT ) </li>
   <li> Email verification & Reset password </li>
-  <li> User can Place order </li>
+  <li> User can Book services </li>
+  <li> User can Order services through checkout page and can view ther order on order page </li>
 </ul>
 
 <h2>Used Technology</h2>
