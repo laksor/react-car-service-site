@@ -20,7 +20,7 @@ Here users can create an account using Email and Password. Users can also use so
   <li> Authentication ( Firebase, JWT ) </li>
   <li> Email verification & Reset password </li>
   <li> User can Book services </li>
-  <li> User can Order services through checkout page and can view ther order on order page </li>
+  <li> User can Order services through checkout page and can view their order on order page </li>
 </ul>
 
 <h2>Used Technology</h2>
