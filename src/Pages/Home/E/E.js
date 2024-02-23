@@ -8,7 +8,7 @@ import experts3 from '../../../images/experts/expert-3.jpg';
 const E = () => {
     return (
         <div className='bg-light p-5'>
-        <h1 className='text-center heading mb-4'>Our Ceative Experts</h1>
+        <h1 className='text-center heading mb-4'>Our Services</h1>
         <section className="team-area mb-5">
         <div className="container">
            <div className="row">
@@ -18,8 +18,8 @@ const E = () => {
                        <img src={experts5} alt="Team" />
                     </div>
                     <div className="team-content">
-                       <h4 className="name">Tyreese Burton</h4>
-                       <span className="sub-title">Founder</span>
+                       <h4 className="name">Oil Changes</h4>
+                       <span className="sub-title">Starting @ $99</span>
                        <ul className="social">
                           <li>
                              <a href="/">
@@ -47,8 +47,8 @@ const E = () => {
                        <img src={experts6} alt="Team" />
                     </div>
                     <div className="team-content">
-                       <h4 className="name">Miguel Graph</h4>
-                       <span className="sub-title">SEO Expert</span>
+                       <h4 className="name">Engine And Cabn Filters</h4>
+                       <span className="sub-title">Better Performance</span>
                        <ul className="social">
                           <li>
                              <a href="/">
@@ -76,8 +76,8 @@ const E = () => {
                        <img src={experts4} alt="Team" />
                     </div>
                     <div className="team-content">
-                       <h4 className="name">Abdur Rahdaman</h4>
-                       <span className="sub-title">Head Developer</span>
+                       <h4 className="name">Wiper Blades</h4>
+                       <span className="sub-title">Better Visibilty</span>
                        <ul className="social">
                           <li>
                              <a href="/">
@@ -105,8 +105,8 @@ const E = () => {
                        <img src={experts3} alt="Team" />
                     </div>
                     <div className="team-content">
-                       <h4 className="name">Brianna Tolbert</h4>
-                       <span className="sub-title">CFO</span>
+                       <h4 className="name">Wiper  Blades</h4>
+                       <span className="sub-title">Drive Saver </span>
                        <ul className="social">
                           <li>
                              <a href="/">
