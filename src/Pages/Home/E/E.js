@@ -18,8 +18,8 @@ const E = () => {
                        <img src={experts5} alt="Team" />
                     </div>
                     <div className="team-content">
-                       <h4 className="name">Jeffery Riley</h4>
-                       <span className="sub-title">Art Director</span>
+                       <h4 className="name">Tyreese Burton</h4>
+                       <span className="sub-title">Founder</span>
                        <ul className="social">
                           <li>
                              <a href="/">
@@ -47,8 +47,8 @@ const E = () => {
                        <img src={experts6} alt="Team" />
                     </div>
                     <div className="team-content">
-                       <h4 className="name">Aliya Butt</h4>
-                       <span className="sub-title">Art Director</span>
+                       <h4 className="name">Miguel Graph</h4>
+                       <span className="sub-title">SEO Expert</span>
                        <ul className="social">
                           <li>
                              <a href="/">
@@ -76,8 +76,8 @@ const E = () => {
                        <img src={experts4} alt="Team" />
                     </div>
                     <div className="team-content">
-                       <h4 className="name">Kamil Kiwis</h4>
-                       <span className="sub-title">Art Director</span>
+                       <h4 className="name">Abdur Rahdaman</h4>
+                       <span className="sub-title">Head Developer</span>
                        <ul className="social">
                           <li>
                              <a href="/">
@@ -105,8 +105,8 @@ const E = () => {
                        <img src={experts3} alt="Team" />
                     </div>
                     <div className="team-content">
-                       <h4 className="name">Riley Beata</h4>
-                       <span className="sub-title">Art Director</span>
+                       <h4 className="name">Brianna Tolbert</h4>
+                       <span className="sub-title">CFO</span>
                        <ul className="social">
                           <li>
                              <a href="/">
