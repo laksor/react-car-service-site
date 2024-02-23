@@ -101,7 +101,7 @@ const Contact = () => {
                                 </div>
                                 <div class="info-content">
                                    <p class="text">
-                                   Madison Street, NewYork, USA
+                                   Railroad Ave, Ambler PA, USA
                                    </p>
                                 </div>
                              </div>
@@ -113,7 +113,7 @@ const Contact = () => {
                                    <i class="lni lni-phone"></i>
                                 </div>
                                 <div class="info-content">
-                                   <p class="text">+61 (8) 8234 3555</p>
+                                   <p class="text">+(215)767-2125</p>
                                 </div>
                              </div>
                         
@@ -124,7 +124,7 @@ const Contact = () => {
                                    <i class="lni lni-phone-set"></i>
                                 </div>
                                 <div class="info-content">
-                                   <p class="text">+61 (8) 8234 3555</p>
+                                   <p class="text">+(215)767-2125</p>
                                 </div>
                              </div>
                         
@@ -135,7 +135,7 @@ const Contact = () => {
                                    <i class="lni lni-envelope"></i>
                                 </div>
                                 <div class="info-content">
-                                   <p class="text">support@thecardoctor.com</p>
+                                   <p class="text">support@momsoilchange.com</p>
                                 </div>
                              </div>
                         

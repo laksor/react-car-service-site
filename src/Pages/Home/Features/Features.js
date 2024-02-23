@@ -20,10 +20,10 @@ const Features = () => {
                 <i className="lni lni-bullhorn"></i>
               </div>
               <div className="items-content">
-                <h4 className="items-title">Trained Technicians</h4>
+                <h4 className="items-title">Exceptional Customer Service</h4>
                 <p className="text">
-                  We use the latest diagnostic equipment to guarantee your
-                  vehicle is serviced correctly.
+                We strive to provide a positive and stress-free experience for every customer,
+                leaving you confident in your choice to trust us with your vehicle.
                 </p>
               </div>
             </div>
@@ -34,10 +34,10 @@ const Features = () => {
                 <i className="lni lni-investment"></i>
               </div>
               <div className="items-content">
-                <h4 className="items-title">Efficiency & Speed</h4>
+                <h4 className="items-title">Efficiency & Percision</h4>
                 <p className="text">
-                  The car doctor is your best source for professional, reliable,
-                  and efficient auto repair service.
+                From routine maintenance to complex repairs, our team works diligently to get the job done right the first time, 
+                ensuring your vehicle is back on the road safely and swiftly.
                 </p>
               </div>
             </div>
@@ -48,10 +48,9 @@ const Features = () => {
                 <i className="lni lni-handshake"></i>
               </div>
               <div className="items-content">
-                <h4 className="items-title">We Have the Technology</h4>
+                <h4 className="items-title">Transparent Communication</h4>
                 <p className="text">
-                  You can be sure that your car will be handled with the latest
-                  diagnostic equipment.
+                We believe in building trust with our customers through transparent communication.
                 </p>
               </div>
             </div>

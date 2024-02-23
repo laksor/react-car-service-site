@@ -17,10 +17,9 @@ const Banner = () => {
       <Carousel.Item className="carousel-itemm">
         <img className="d-block w-100 h" src={banner1} alt="First slide" />
         <Carousel.Caption>
-          <h3>Efficiency & Speed</h3>
+          <h3>Say Goodbye to Oil Change Stress</h3>
           <p>
-            The car doctor is your best source for professional, reliable, and
-            efficient auto repair service.
+          Tired of squeezing oil changes into your busy schedule? Say goodbye to the stress and hello to convenience with Moms Mobile Oil Change.
           </p>
           <a href="/experts"><button className="btn btn-danger rounded-pill m-2">Our Services</button></a>
           <a href="/#email"><button className="btn btn-warning rounded-pill">Get Discount</button></a>
@@ -30,10 +29,9 @@ const Banner = () => {
         <img className="d-block w-100 h" src={banner2} alt="Second slide" />
 
         <Carousel.Caption>
-          <h3>ASE Certified Technicians</h3>
+          <h3>Don't let a busy schedule keep you from proper car care!</h3>
           <p>
-            Our highly skilled technicians offer comprehensive knowledge and
-            experience.
+              Imagine never having to wait in line for an oil change again.
           </p>
           <a href="/service"><button className="btn btn-danger rounded-pill m-2">Our Services</button></a>
           <a href="home#email"><button className="btn btn-warning rounded-pill">Get Discount</button></a>
@@ -43,9 +41,9 @@ const Banner = () => {
         <img className="d-block w-100 h" src={banner3} alt="Third slide" />
 
         <Carousel.Caption>
-          <h3>We Have the Technology</h3>
+          <h3>Enjoy more time for yourself while we take care of your car.</h3>
           <p>
-            You can be sure that your car will be handled with the latest
+              You can be sure that your car will be handled with the latest
             diagnostic equipment.
           </p>
           <a href="/services"><button className="btn btn-danger rounded-pill m-2">Our Services</button></a>
